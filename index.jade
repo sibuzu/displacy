@@ -16,4 +16,114 @@ header.o-banner.o-form
 
 .o-container#displacy
 
+table.o-block.u-text-small
+    thread
+        tr.head
+            th 詞性標記
+            th 描述
+            th 詞性標記
+            th 描述
+            th 詞性標記
+            th 描述
+            th 詞性標記
+            th 描述
+    tbody
+        - var items = []
+        - items.push(["CC","並列連詞"])
+        - items.push(["CD","基數"])
+        - items.push(["DT","限定詞"])
+        - items.push(["IN","介詞或從屬連詞"])
+        - items.push(["JJ","形容詞"])
+        - items.push(["JJR","形容詞(比較級)"])
+        - items.push(["JJS","形容詞(最高級)"])
+        - items.push(["MD","助動詞"])
+        - items.push(["NFP","非最終標點符號"])
+        - items.push(["NN","名詞(單數)"])
+        - items.push(["NNS","名詞(複數)"])
+        - items.push(["NNP","專有名詞(單數)"])
+        - items.push(["NNPS","專有名詞(複數)"])
+        - items.push(["PRP","代名詞"])
+        - items.push(["RB","副詞"])
+        - items.push(["RBR","副詞(比較級)"])
+        - items.push(["RBS","副詞(最高級)"])
+        - items.push(["SYM","符號"])
+        - items.push(["TO","介詞to"])
+        - items.push(["UKW","未知詞"])
+        - items.push(["VB","動詞(原形)"])
+        - items.push(["VBP","動詞(現在式, 非第三人稱單數)"])
+        - items.push(["VBZ","動詞(現在式, 第三人稱單數)"])
+        - items.push(["VBD","動詞(過去式)"])
+        - items.push(["VBN","動詞(過去分詞)"])
+        - items.push(["VBG","動詞(動名詞或現在分詞)"])
+        - items.push(["WDT","關係限定詞"])
+        - items.push(["WP","關係代名詞"])
+        - items.push(["WRB","關係副詞"])
+        - items.push(["XX","其他"])
+        - items.push(["",""])
+        - items.push(["",""])
+        - items.push(["",""])
+
+        each item, i in items
+            - if (i % 4 == 0)
+                tr
+            td #{item[0]}
+            td #{item[1]}
+
+table.o-block.u-text-small
+    thread
+        tr.head
+            th Dependencies
+            th Description
+            th Dependencies
+            th Description
+            th Dependencies
+            th Description
+    tbody
+        - var items = []
+        - items.push(["acomp","adjectival complement"])
+        - items.push(["advcl","adverbial clause modifier"])
+        - items.push(["advmod","adverb modifier"])
+        - items.push(["agent","agent"])
+        - items.push(["amod","adjectival modifier"])
+        - items.push(["appos","appositional modifier"])
+        - items.push(["attr","attribute"])
+        - items.push(["aux","auxiliary"])
+        - items.push(["auxpass","passive auxiliary"])
+        - items.push(["cc","coordination"])
+        - items.push(["ccomp","clausal complement"])
+        - items.push(["conj","conjunct"])
+        - items.push(["cop","copula"])
+        - items.push(["csubj","clausal subject"])
+        - items.push(["csubjpass","clausal passive subject"])
+        - items.push(["dep","dependent"])
+        - items.push(["det","determiner"])
+        - items.push(["discourse","discourse element"])
+        - items.push(["dobj","direct object"])
+        - items.push(["expl","expletive"])
+        - items.push(["goeswith","goes width"])
+        - items.push(["iobj","indirect object"])
+        - items.push(["mark","marker"])
+        - items.push(["mwe","multi-word expression"])
+        - items.push(["neg","negation modifier"])
+        - items.push(["nmod","名詞修飾"])
+        - items.push(["nsubj","主詞"])
+        - items.push(["nsubjpass","被動主詞"])
+        - items.push(["pobj","介詞的受詞"])
+        - items.push(["prep","前置詞"])
+        - items.push(["rel","相對關係"])
+        - items.push(["relcl","關係子句"])
+        - items.push(["root","根節點"])
+        - items.push(["",""])
+        - items.push(["",""])
+        - items.push(["",""])
+
+        each item, i in items
+            - if (i % 3 == 0)
+                tr
+            td #{item[0]}
+            td #{item[1]}
+
+div.o-block
+    +a("http://nlp.stanford.edu/software/dependencies_manual.pdf") dependencies manual
+
 +error("Oops, something went wrong. Please try again!")
