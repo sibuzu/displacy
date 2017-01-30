@@ -66,7 +66,7 @@ table.o-block.u-text-small
         each item, i in items
             - if (i % 4 == 0)
                 tr
-            td #{item[0]}
+            td.bold #{item[0]}
             td #{item[1]}
 
 table.o-block.u-text-small
@@ -105,14 +105,32 @@ table.o-block.u-text-small
         - items.push(["mark","marker"])
         - items.push(["mwe","multi-word expression"])
         - items.push(["neg","negation modifier"])
-        - items.push(["nmod","名詞修飾"])
-        - items.push(["nsubj","主詞"])
-        - items.push(["nsubjpass","被動主詞"])
-        - items.push(["pobj","介詞的受詞"])
-        - items.push(["prep","前置詞"])
-        - items.push(["rel","相對關係"])
-        - items.push(["relcl","關係子句"])
-        - items.push(["root","根節點"])
+        - items.push(["nn","noun compound modifier"])
+        - items.push(["npadvmod","noun phrase as adverbial modifier"])
+        - items.push(["nsubj","nominal subject"])
+        - items.push(["nsubjpass","passive nominal subject"])
+        - items.push(["num","numeric modifier"])
+        - items.push(["number","element of compound number"])
+        - items.push(["parataxis","parataxis"])
+        - items.push(["pcomp","prepositional complement"])
+        - items.push(["pobj","object of a preposition"])
+        - items.push(["poss","possession modifier"])
+        - items.push(["possessive","possessive modifier"])
+        - items.push(["preconj","preconjunct"])
+        - items.push(["predet","predeterminer"])
+        - items.push(["prep","prepositional modifier"])
+        - items.push(["prepc","prepositional clausal modifier"])
+        - items.push(["prt","phrasal verb particle"])
+        - items.push(["punct","punctuation"])
+        - items.push(["quantmod","quantifier phrase modifier"])
+        - items.push(["rcmod","relative clause modifier"])
+        - items.push(["ref","referent"])
+        - items.push(["relcl","relative clause"])
+        - items.push(["root","root"])
+        - items.push(["tmod","temporal modifier"])
+        - items.push(["vmod","reduced non-finite verbal modifier"])
+        - items.push(["xcomp","open clausal complement"])
+        - items.push(["xsubj","controlling subject"])
         - items.push(["",""])
         - items.push(["",""])
         - items.push(["",""])
@@ -120,7 +138,7 @@ table.o-block.u-text-small
         each item, i in items
             - if (i % 3 == 0)
                 tr
-            td #{item[0]}
+            td.bold #{item[0]}
             td #{item[1]}
 
 div.o-block
